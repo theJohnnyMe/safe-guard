@@ -15,8 +15,6 @@ section {
   display: flex;
   align-items: center;
   background-color: white;
-  border: 2px solid black;
-  padding: 8px;
   font-family: "Scania Sans Headline", arial, helvetica, sans-serif;
   border-radius: 4px;
   height: 56px;
@@ -56,4 +54,14 @@ section {
   line-height: 48px;
   letter-spacing: 3.84px;
   width: 100%;
+  height: 48px;
+  border-radius: 4px;
+}
+
+.start-center {
+  margin-top: 64px;
+}
+
+.start-bottom {
+  margin-top: 192px;
 }
