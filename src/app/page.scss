@@ -19,23 +19,11 @@ section {
   border-radius: 4px;
   height: 56px;
   width: 100%;
+  overflow: hidden;
 }
 
 .license-plate .eu-section {
-  background-color: #004b87; /* Swedish flag blue */
-  color: white;
-  padding: 0 10px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.eu-stars {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23FFF" d="M256 0l24.1 76.4h80.4l-65 47.2 24.8 76.4L256 229.2l-65.3 47.2 24.8-76.4-65-47.2h80.4z"/><path fill="%23FFF" d="M256 0v302.4L190.7 229.2l-24.8 76.4 65 47.2H100.5L256 76.4V0zm0 0l24.1 76.4h80.4l-65 47.2 24.8 76.4L256 229.2V0zm0 302.4l65.3-73.2 24.8 76.4-65 47.2v-50.4zm0 0v50.4l-65.3-47.2 24.8-76.4L256 302.4z"/></svg>');
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  background-size: cover;
+  background-color: #2b70d3;
 }
 
 .license-plate input {
@@ -56,6 +44,12 @@ section {
   width: 100%;
   height: 48px;
   border-radius: 4px;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: #0d0f13;
+    opacity: 0.1;
+  }
 }
 
 .start-center {
@@ -64,4 +58,30 @@ section {
 
 .start-bottom {
   margin-top: 192px;
+}
+
+.secondary-button {
+  display: flex;
+  height: 56px;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  background-color: transparent;
+  color: white;
+
+  width: 100%;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.14px;
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
 }
