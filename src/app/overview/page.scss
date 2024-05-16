@@ -25,6 +25,7 @@
   .overview__your-info {
     max-width: 600px;
     padding: 24px 16px;
+
     .overview__your-info_headline {
       padding-bottom: 24px;
       display: flex;
@@ -54,20 +55,64 @@
     max-width: 600px;
     color: black;
     background-color: white;
-    padding: 24px 16px;
+    padding: 48px 16px 48px 16px;
 
     .overview__your-extra-info_list {
       list-style: none;
       padding: 0;
+      margin: 0;
 
       & li {
-        padding: 16px 0;
+        & h3 {
+          margin: 0 0 8px 0;
+        }
       }
     }
   }
 
   .overview__your-option {
     max-width: 600px;
+    color: black;
+    background-color: white;
+    border-top: 1px solid #dbdfe6;
+    border-bottom: 1px solid #dbdfe6;
+
+    .overview__your-option_detail {
+      padding: 8px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .overview__your-option_detail_summary {
+      }
+    }
+
+    .overview__your-option_table {
+      width: 100%;
+      border-collapse: collapse;
+
+      td:not(:first-child) {
+        background-color: #f9fafb;
+      }
+
+      & td,
+      & th {
+        padding-top: 8px;
+        padding-bottom: 16px;
+        color: rgba(13, 15, 19, 0.6);
+        font-weight: 400;
+      }
+
+      & td {
+        border-top: 1px solid #dbdfe6;
+      }
+    }
+  }
+
+  .overview_sign-up {
+    max-width: 600px;
+    padding: 24px 16px;
     color: black;
     background-color: white;
   }
