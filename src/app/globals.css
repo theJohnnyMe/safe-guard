@@ -1,2 +1,13 @@
 @import url("reset.css");
 @import url("@scania/tegel/dist/tegel/tegel.css");
+
+main {
+  display: flex;
+  height: calc(100vh - 64px);
+  width: 100%;
+  background-image: url(../../public/app-background.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--tds-white);
+}
