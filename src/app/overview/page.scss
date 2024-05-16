@@ -1,11 +1,13 @@
 .overview {
   width: 100%;
   background-color: #041e42;
+  overflow-y: auto;
+  height: 100%;
 
   .overview__price {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 600px;
     padding-top: 98px;
     padding-bottom: 24px;
 
@@ -21,7 +23,7 @@
   }
 
   .overview__your-info {
-    max-width: 400px;
+    max-width: 600px;
     padding: 24px 16px;
     .overview__your-info_headline {
       padding-bottom: 24px;
@@ -49,7 +51,7 @@
     }
   }
   .overview__your-extra-info {
-    max-width: 400px;
+    max-width: 600px;
     color: black;
     background-color: white;
     padding: 24px 16px;
@@ -65,7 +67,7 @@
   }
 
   .overview__your-option {
-    max-width: 400px;
+    max-width: 600px;
     color: black;
     background-color: white;
   }
