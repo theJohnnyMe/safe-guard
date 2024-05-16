@@ -3,11 +3,12 @@ import "./page.scss";
 import { TdsButton } from "@scania/tegel-react";
 import { useState } from "react";
 import ProgressBar from "./components/progress-bar/progress-bar";
+import LoadItem from "./components/load-item/load-item";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
 
-  const [startPage, setStartPage] = useState(true);
+  const [startPage, setStartPage] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     let value = event.target.value;
@@ -127,8 +128,9 @@ export default function Home() {
         <div className="loading-page">
           <div className="container">
             <h1>Hello loading page</h1>
-            <ProgressBar width={25} />
             <h5 className="tds-headline-05">Gathering driver profile</h5>
+            <LoadItem message="Gathering driver profile" />
+            <ProgressBar width={25} />
           </div>
         </div>
       )}
