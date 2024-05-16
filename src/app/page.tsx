@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     let interval: ReturnType<typeof setInterval> | undefined;
 
-    if (isActive && timer < 7) {
+    if (isActive && timer < 8) {
       interval = setInterval(() => {
         setTimer((timer) => timer + 1);
       }, 1000);
