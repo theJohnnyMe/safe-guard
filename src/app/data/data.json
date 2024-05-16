@@ -1,0 +1,38 @@
+[
+  {
+    "registrationNumber": "ABC 123",
+    "driverPerformanceGrade": "A",
+    "driverAge": 45,
+    "numberOfViolations": 0,
+    "averageMonthlyDriveTime": "40 hours",
+    "annualAverageDistance": "120000 km",
+    "regularlyServiced": true,
+    "yearOfTruckProduction": 2018,
+    "modelOfTruck": "Scania R450",
+    "engineType": "BEV"
+  },
+  {
+    "registrationNumber": "DEF 456",
+    "driverPerformanceGrade": "C",
+    "driverAge": 38,
+    "numberOfViolations": 2,
+    "averageMonthlyDriveTime": "60 hours",
+    "annualAverageDistance": "95000 km",
+    "regularlyServiced": false,
+    "yearOfTruckProduction": 2015,
+    "modelOfTruck": "Scania G320",
+    "engineType": "Gas"
+  },
+  {
+    "registrationNumber": "GHI 789",
+    "driverPerformanceGrade": "E",
+    "driverAge": 30,
+    "numberOfViolations": 5,
+    "averageMonthlyDriveTime": "30 hours",
+    "annualAverageDistance": "50000 km",
+    "regularlyServiced": false,
+    "yearOfTruckProduction": 2010,
+    "modelOfTruck": "Scania P360",
+    "engineType": "Diesel"
+  }
+]
