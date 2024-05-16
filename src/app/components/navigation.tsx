@@ -1,11 +1,15 @@
 "use client";
 import { defineCustomElements } from "@scania/tegel-react";
+import { useRouter, usePathname } from "next/navigation";
 import "./navigation.scss";
 defineCustomElements();
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
+  console.log("pathname is:" + pathname);
   return (
-    <nav>
+    <nav className={pathname === "/loading" ? "loading-nav" : ""}>
       <button className="nav-btn">
         <svg
           width="20"
@@ -34,7 +38,7 @@ export default function Header() {
           />
         </svg>
       </button>
-      <button className="nav-btn">
+      <button className="nav-btn" onClick={() => router.push("/")}>
         <svg
           width="32"
           height="31"

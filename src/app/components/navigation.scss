@@ -6,8 +6,15 @@ nav {
   background: transparent;
 }
 
+.loading-nav {
+  background-color: white;
+}
+
 .nav-btn {
   border: none;
   background: transparent;
   padding: 16px;
+  &:hover {
+    cursor: pointer;
+  }
 }
