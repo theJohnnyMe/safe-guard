@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import "./page.scss";
 import { TdsButton } from "@scania/tegel-react";
 import { useState, useEffect } from "react";
@@ -8,20 +9,28 @@ import LoadItem from "./components/load-item/load-item";
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
 
-  const [startPage, setStartPage] = useState(false);
+  const [startPage, setStartPage] = useState(true);
 
   const [timer, setTimer] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
+  const router = useRouter();
+
   useEffect(() => {
     let interval: ReturnType<typeof setInterval> | undefined;
 
-    if (isActive && timer < 7) {
+    if (isActive && timer < 9) {
       interval = setInterval(() => {
         setTimer((timer) => timer + 1);
       }, 1000);
     } else if (!isActive && timer !== 0) {
       clearInterval(interval);
+    }
+
+    if (timer === 9) {
+      // Check if the timer has reached the end
+      clearInterval(interval); // Clear the interval
+      router.push("/overview"); // Redirect to the overview page
     }
 
     return () => clearInterval(interval);
@@ -37,6 +46,7 @@ export default function Home() {
   // Example function to start the timer
   const startTimer = () => {
     setIsActive(true);
+    setStartPage(false);
   };
 
   return (
@@ -133,7 +143,7 @@ export default function Home() {
               text="See your price"
               fullbleed
               disabled={!inputValue || inputValue.length !== 7}
-              onClick={() => setStartPage(false)}
+              onClick={startTimer}
             ></TdsButton>
           </div>
 
@@ -158,6 +168,11 @@ export default function Home() {
 
             <div className="loader-title-container">
               <div className="loader-title">
+                {timer === 0 && (
+                  <h5 className="tds-headline-05 loader-title tds-u-opacity-0 tds-u-visibility-hidden">
+                    Test
+                  </h5>
+                )}
                 {timer === 1 && (
                   <h5 className="tds-headline-05 loader-title">
                     Connecting to the database
@@ -190,8 +205,6 @@ export default function Home() {
                 )}
               </div>
               <ProgressBar width={timer * 12.5} />
-              <button onClick={startTimer}>Start Timer</button>
-              <p>Timer: {timer}</p>
             </div>
           </div>
         </div>
