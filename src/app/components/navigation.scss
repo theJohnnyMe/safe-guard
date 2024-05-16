@@ -17,4 +17,8 @@ nav {
   &:hover {
     cursor: pointer;
   }
+
+  .loading-nav & svg path {
+    fill: black;
+  }
 }
