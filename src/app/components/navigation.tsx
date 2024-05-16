@@ -14,7 +14,7 @@ export default function Header() {
     <TdsHeader>
       <TdsHeaderHamburger
         onClick={() => {
-          toggleMobileNav();
+          console.log("Hello menu");
         }}
         aria-label="Open application drawer"
         aria-haspopup="true"
