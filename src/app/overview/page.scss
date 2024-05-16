@@ -5,9 +5,13 @@
   .overview__price {
     display: flex;
     flex-direction: column;
+    max-width: 400px;
+    padding-top: 98px;
+    padding-bottom: 24px;
 
     .overview__price-text {
-      color: #ffffff90;
+      color: #ffffff;
+      margin: 0;
     }
 
     .overview__price-headline {
@@ -15,7 +19,53 @@
       font-size: 80px;
     }
   }
+
+  .overview__your-info {
+    max-width: 400px;
+    padding: 24px 16px;
+    .overview__your-info_headline {
+      padding-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+    .overview_your-info__table {
+      width: 100%;
+      border-collapse: collapse;
+
+      & th,
+      & td {
+        border-top: 1px solid grey;
+        padding: 8px 0;
+      }
+
+      & th {
+        text-align: left;
+      }
+
+      & td {
+        text-align: right;
+      }
+    }
+  }
   .overview__your-extra-info {
+    max-width: 400px;
+    color: black;
+    background-color: white;
+    padding: 24px 16px;
+
+    .overview__your-extra-info_list {
+      list-style: none;
+      padding: 0;
+
+      & li {
+        padding: 16px 0;
+      }
+    }
+  }
+
+  .overview__your-option {
+    max-width: 400px;
     color: black;
     background-color: white;
   }
