@@ -1,1 +1,59 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
+.container {
+  width: 100%;
+  max-width: 342px;
+}
+
+.license-plate {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid black;
+  padding: 8px;
+  font-family: "Scania Sans Headline", arial, helvetica, sans-serif;
+  border-radius: 4px;
+  height: 56px;
+  width: 100%;
+}
+
+.license-plate .eu-section {
+  background-color: #004b87; /* Swedish flag blue */
+  color: white;
+  padding: 0 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.eu-stars {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23FFF" d="M256 0l24.1 76.4h80.4l-65 47.2 24.8 76.4L256 229.2l-65.3 47.2 24.8-76.4-65-47.2h80.4z"/><path fill="%23FFF" d="M256 0v302.4L190.7 229.2l-24.8 76.4 65 47.2H100.5L256 76.4V0zm0 0l24.1 76.4h80.4l-65 47.2 24.8 76.4L256 229.2V0zm0 302.4l65.3-73.2 24.8 76.4-65 47.2v-50.4zm0 0v50.4l-65.3-47.2 24.8-76.4L256 302.4z"/></svg>');
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-size: cover;
+}
+
+.license-plate input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin-left: 10px;
+  text-align: center;
+
+  color: var(--Grey-958, #0d0f13);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 3.84px;
+  width: 100%;
+}
