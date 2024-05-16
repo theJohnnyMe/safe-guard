@@ -19,7 +19,7 @@ export default function LoadItem({ message = "Gathering driver profile" }) {
           fill="white"
         />
       </svg>
-      <p className="tds-detail-02">{message}</p>
+      <p className="tds-detail-02 tds-u-opacity-60">{message}</p>
     </div>
   );
 }

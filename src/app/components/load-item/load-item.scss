@@ -2,7 +2,19 @@
   width: unset;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .load-item {
-  gap: 10px;
+  gap: 12px;
   align-items: center;
+  height: 24px;
+  margin-bottom: 16px;
+  animation: fadeIn 200ms ease-out;
 }

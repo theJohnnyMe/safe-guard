@@ -104,3 +104,24 @@ section {
   height: 100vh;
   color: var(--tds-black);
 }
+
+.loader-container {
+  height: 200px;
+}
+
+.loader-title-container {
+  margin-top: 96px;
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader-title {
+  animation: fadeInOpacity 150ms ease-in;
+}
