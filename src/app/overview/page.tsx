@@ -8,7 +8,7 @@ export default function Overview() {
   return (
     <div className="overview">
       <div className="overview__price tds-container-fluid">
-        <p className="overview__price-text tds-detail-01 tds-u-opacity-60">
+        <p className="overview__price-text tds-detail-02 tds-u-opacity-60">
           Your price
         </p>
         <h1 className="overview__price-headline tds-headline-01">
@@ -66,9 +66,9 @@ export default function Overview() {
       <div className="overview__your-extra-info tds-container-fluid">
         <ul className="overview__your-extra-info_list">
           <li>
-            <h3 className="tds-headline-06">
+            <h6 className="tds-headline-06">
               No deductible for personal injury
-            </h3>
+            </h6>
             This always applies with our policies. Additionally, you can opt for
             a SEK 0 deductible for property damage in traffic incidents.
           </li>
