@@ -4,6 +4,7 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: auto;
 }
 
 .container {
@@ -53,6 +54,10 @@ section {
 }
 
 .start-center {
+  padding-top: 64px;
+}
+
+.start-center {
   margin-top: 64px;
 }
 
@@ -84,4 +89,18 @@ section {
   &:hover {
     border: 1px solid rgba(255, 255, 255, 1);
   }
+}
+
+// Loading page
+
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tds-white);
+  width: 100%;
+  max-width: unset;
+  height: 100vh;
+  color: var(--tds-black);
 }
