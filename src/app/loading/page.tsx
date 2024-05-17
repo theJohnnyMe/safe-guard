@@ -25,7 +25,7 @@ export default function Loading() {
     if (timer === 9) {
       // Check if the timer has reached the end
       clearInterval(interval); // Clear the interval
-      // router.push("/overview"); // Redirect to the overview page
+      router.push("/price-comparison"); // Redirect to the overview page
     }
 
     return () => clearInterval(interval);

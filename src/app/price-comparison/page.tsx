@@ -1,9 +1,10 @@
 "use client";
 import { TdsButton } from "@scania/tegel-react";
+import { useRouter } from "next/navigation";
 import "./page.scss";
-import Truck from "../components/truck";
 
 export default function PriceComparison() {
+  const router = useRouter();
   return (
     <div className="price-comparison">
       <div className="price-comparison__price tds-container-fluid">
@@ -11,7 +12,7 @@ export default function PriceComparison() {
           Your price
         </p>
         <h1 className="price-comparison__price-headline tds-headline-01">
-          1100{" "}
+          1160{" "}
           <span className="price-comparison__price-headline-kronor tds-headline-05">
             kr/mo
           </span>
@@ -21,6 +22,7 @@ export default function PriceComparison() {
           size="lg"
           fullbleed={true}
           text="Sign up!"
+          onClick={() => router.push("/overview")}
         ></TdsButton>
         <button className="secondary-button">See my information</button>
       </div>
@@ -29,40 +31,34 @@ export default function PriceComparison() {
         <div>
           <h2 className="price-comparison__your-info_headline tds-headline-05">
             Compare rates
-            <span>
-              <Truck />
-            </span>
           </h2>
+          <p className="tds-detail-05 tds-u-textalign-end">Price per month</p>
         </div>
         <table className="price-comparison_your-info__table tds-u-opacity-60">
           <tbody>
             <tr>
-              <th>Registration Number</th>
-              <td>EKY 055</td>
+              <th>
+                <b>Scania SafeGuard</b>
+              </th>
+              <td>
+                <b>1160 kr</b>
+              </td>
             </tr>
             <tr>
-              <th>Driving Performance Score</th>
-              <td>B</td>
+              <th>Länsförsäkringar</th>
+              <td>1480 kr</td>
             </tr>
             <tr>
-              <th>Driver Age</th>
-              <td>42</td>
+              <th>Folksam</th>
+              <td>1720 kr</td>
             </tr>
             <tr>
-              <th>Infractions</th>
-              <td>2</td>
+              <th>Trygg-Hansa</th>
+              <td>1390 kr</td>
             </tr>
             <tr>
-              <th>Average Monthly Drive Time</th>
-              <td>223 hrs</td>
-            </tr>
-            <tr>
-              <th>Average Annual Distance</th>
-              <td>102,489 km</td>
-            </tr>
-            <tr>
-              <th>Maintenance Schedule</th>
-              <td>Up to date</td>
+              <th>Svedea</th>
+              <td>1554 kr</td>
             </tr>
           </tbody>
         </table>
