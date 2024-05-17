@@ -5,6 +5,9 @@ import Checkmark from "../components/checkmark";
 import Truck from "../components/truck";
 
 export default function Overview() {
+  const truckSession: any = sessionStorage.getItem("SelectedTruck");
+  const truck = JSON.parse(truckSession);
+
   return (
     <div className="overview">
       <div className="overview__price tds-container-fluid">
@@ -12,7 +15,7 @@ export default function Overview() {
           Your price
         </p>
         <h1 className="overview__price-headline tds-headline-01">
-          1160{" "}
+          {truck.cost}
           <span className="overview__price-headline-kronor tds-headline-05">
             kr/mo
           </span>
@@ -33,31 +36,31 @@ export default function Overview() {
           <tbody>
             <tr>
               <th>Registration Number</th>
-              <td>EKY 055</td>
+              <td> {truck.registrationNumber.toUpperCase()}</td>
             </tr>
             <tr>
               <th>Driving Performance Score</th>
-              <td>B</td>
+              <td> {truck.driverPerformanceGrade}</td>
             </tr>
             <tr>
               <th>Driver Age</th>
-              <td>42</td>
+              <td>{truck.driverAge}</td>
             </tr>
             <tr>
               <th>Infractions</th>
-              <td>2</td>
+              <td>{truck.numberOfViolations}</td>
             </tr>
             <tr>
               <th>Average Monthly Drive Time</th>
-              <td>223 hrs</td>
+              <td>{truck.averageMonthlyDriveTime}</td>
             </tr>
             <tr>
               <th>Average Annual Distance</th>
-              <td>102,489 km</td>
+              <td>{truck.annualAverageDistance}</td>
             </tr>
             <tr>
               <th>Maintenance Schedule</th>
-              <td>Up to date</td>
+              <td>{truck.regularlyServiced ? "Up to date" : "Delayed"}</td>
             </tr>
           </tbody>
         </table>
