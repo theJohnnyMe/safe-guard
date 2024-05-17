@@ -9,7 +9,8 @@
     "regularlyServiced": true,
     "yearOfTruckProduction": 2018,
     "modelOfTruck": "Scania R450",
-    "engineType": "BEV"
+    "engineType": "BEV",
+    "cost": 1160
   },
   {
     "registrationNumber": "AVG123",
@@ -21,7 +22,8 @@
     "regularlyServiced": false,
     "yearOfTruckProduction": 2015,
     "modelOfTruck": "Scania G320",
-    "engineType": "Gas"
+    "engineType": "Gas",
+    "cost": 1350
   },
   {
     "registrationNumber": "BAD001",
@@ -33,6 +35,7 @@
     "regularlyServiced": false,
     "yearOfTruckProduction": 2010,
     "modelOfTruck": "Scania P360",
-    "engineType": "Diesel"
+    "engineType": "Diesel",
+    "cost": 2198
   }
 ]

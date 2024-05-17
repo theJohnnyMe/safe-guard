@@ -2,17 +2,23 @@
 import { TdsButton } from "@scania/tegel-react";
 import { useRouter } from "next/navigation";
 import "./page.scss";
+import { useEffect, useState } from "react";
 
 export default function PriceComparison() {
   const router = useRouter();
+
+  const truckSession: any = sessionStorage.getItem("SelectedTruck");
+  const truck = JSON.parse(truckSession);
+
   return (
     <div className="price-comparison">
+      {/* {truck.registrationNumber} */}
       <div className="price-comparison__price tds-container-fluid">
         <p className="price-comparison__price-text tds-detail-02 tds-u-opacity-60">
           Your price
         </p>
         <h1 className="price-comparison__price-headline tds-headline-01">
-          1160{" "}
+          {truck.cost}
           <span className="price-comparison__price-headline-kronor tds-headline-05">
             kr/mo
           </span>
@@ -41,24 +47,24 @@ export default function PriceComparison() {
                 <b>Scania SafeGuard</b>
               </th>
               <td>
-                <b>1160 kr</b>
+                <b>{truck.cost} kr</b>
               </td>
             </tr>
             <tr>
               <th>Länsförsäkringar</th>
-              <td>1480 kr</td>
+              <td>{truck.cost + 294} kr</td>
             </tr>
             <tr>
               <th>Folksam</th>
-              <td>1720 kr</td>
+              <td>{truck.cost + 312} kr</td>
             </tr>
             <tr>
               <th>Trygg-Hansa</th>
-              <td>1390 kr</td>
+              <td>{truck.cost + 347} kr</td>
             </tr>
             <tr>
               <th>Svedea</th>
-              <td>1554 kr</td>
+              <td>{truck.cost + 501} kr</td>
             </tr>
           </tbody>
         </table>

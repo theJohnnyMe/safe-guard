@@ -11,10 +11,18 @@ export default function Home() {
   const router = useRouter();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    let value = event.target.value;
+    let value = event.target.value.toLowerCase();
     value = value.replace(/\s+/g, ""); // Remove existing spaces
     value = value.match(/.{1,3}/g)?.join(" ") ?? ""; // Insert space after every 3 characters
     setInputValue(value.toUpperCase()); // Convert to uppercase and set the value
+
+    trucks.find((truck: any) => {
+      const cleanedValue = value.replace(/\s+/g, "");
+      if (truck.registrationNumber.toLowerCase() === cleanedValue) {
+        console.log(truck);
+        sessionStorage.setItem("SelectedTruck", JSON.stringify(truck));
+      }
+    });
   };
 
   useEffect(() => {
