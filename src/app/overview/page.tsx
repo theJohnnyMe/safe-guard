@@ -3,10 +3,22 @@ import { TdsButton } from "@scania/tegel-react";
 import "./page.scss";
 import Checkmark from "../components/checkmark";
 import Truck from "../components/truck";
+import { useEffect, useState } from "react";
+import { Truck as TruckInterface } from "../../interface/truck-interface";
 
 export default function Overview() {
-  const truckSession: any = sessionStorage.getItem("SelectedTruck");
-  const truck = JSON.parse(truckSession);
+  const [truck, setTruck] = useState<TruckInterface | null>(null);
+
+  useEffect(() => {
+    const truckSession = sessionStorage.getItem("SelectedTruck");
+    if (truckSession) {
+      setTruck(JSON.parse(truckSession));
+    }
+  }, []);
+
+  if (!truck) {
+    return <div>Loading...</div>; // Or any other loading state representation
+  }
 
   return (
     <div className="overview">

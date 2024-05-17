@@ -3,16 +3,25 @@ import { TdsButton } from "@scania/tegel-react";
 import { useRouter } from "next/navigation";
 import "./page.scss";
 import { useEffect, useState } from "react";
+import { Truck } from "../../interface/truck-interface";
 
 export default function PriceComparison() {
   const router = useRouter();
+  const [truck, setTruck] = useState<Truck | null>(null);
 
-  const truckSession: any = sessionStorage.getItem("SelectedTruck");
-  const truck = JSON.parse(truckSession);
+  useEffect(() => {
+    const truckSession = sessionStorage.getItem("SelectedTruck");
+    if (truckSession) {
+      setTruck(JSON.parse(truckSession));
+    }
+  }, []);
+
+  if (!truck) {
+    return <div>Loading...</div>; // Or any other loading state representation
+  }
 
   return (
     <div className="price-comparison">
-      {/* {truck.registrationNumber} */}
       <div className="price-comparison__price tds-container-fluid">
         <p className="price-comparison__price-text tds-detail-02 tds-u-opacity-60">
           Your price
