@@ -2,12 +2,11 @@
 import { useRouter } from "next/navigation";
 import "./page.scss";
 import { TdsButton } from "@scania/tegel-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
-
-  const [startPage, setStartPage] = useState(true);
+  const [trucks, setTrucks] = useState([]);
 
   const router = useRouter();
 
@@ -17,6 +16,22 @@ export default function Home() {
     value = value.match(/.{1,3}/g)?.join(" ") ?? ""; // Insert space after every 3 characters
     setInputValue(value.toUpperCase()); // Convert to uppercase and set the value
   };
+
+  useEffect(() => {
+    async function fetchTrucks() {
+      try {
+        const response = await fetch("/data/data.json");
+        // const response = await fetch("/data/data.json");
+        console.log("TRUCKS");
+        const data = await response.json();
+        setTrucks(data);
+      } catch (error) {
+        console.error("Error fetching trucks:", error);
+      }
+    }
+
+    fetchTrucks();
+  }, []);
 
   return (
     <section>

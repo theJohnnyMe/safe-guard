@@ -19,20 +19,20 @@ export default function Header() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M2.48096 4.37305C2.48096 4.02787 2.76078 3.74805 3.10596 3.74805L16.8881 3.74805C17.2332 3.74805 17.5131 4.02787 17.5131 4.37305C17.5131 4.71823 17.2332 4.99805 16.8881 4.99805L3.10596 4.99805C2.76078 4.99805 2.48096 4.71822 2.48096 4.37305Z"
             fill="white"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M2.48096 9.98812C2.48096 9.64295 2.76078 9.36312 3.10596 9.36312L16.8881 9.36312C17.2332 9.36312 17.5131 9.64295 17.5131 9.98812C17.5131 10.3333 17.2332 10.6131 16.8881 10.6131L3.10596 10.6131C2.76078 10.6131 2.48096 10.3333 2.48096 9.98812Z"
             fill="white"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M2.48096 15.6035C2.48096 15.2583 2.76078 14.9785 3.10596 14.9785L16.8881 14.9785C17.2332 14.9785 17.5131 15.2583 17.5131 15.6035C17.5131 15.9487 17.2332 16.2285 16.8881 16.2285L3.10596 16.2285C2.76078 16.2285 2.48096 15.9487 2.48096 15.6035Z"
             fill="white"
           />
@@ -47,7 +47,7 @@ export default function Header() {
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
-          <g clip-path="url(#clip0_50_528)">
+          <g clipPath="url(#clip0_50_528)">
             <rect width="32" height="30.3936" fill="url(#pattern0_50_528)" />
           </g>
           <defs>
