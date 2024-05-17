@@ -7,7 +7,7 @@ defineCustomElements();
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
-  console.log("pathname is:" + pathname);
+
   return (
     <nav className={pathname === "/loading" ? "loading-nav" : ""}>
       <button className="nav-btn">
