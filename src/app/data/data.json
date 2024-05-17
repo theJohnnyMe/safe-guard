@@ -1,6 +1,6 @@
 [
   {
-    "registrationNumber": "ABC 123",
+    "registrationNumber": "GRT001",
     "driverPerformanceGrade": "A",
     "driverAge": 45,
     "numberOfViolations": 0,
@@ -12,7 +12,7 @@
     "engineType": "BEV"
   },
   {
-    "registrationNumber": "DEF 456",
+    "registrationNumber": "AVG123",
     "driverPerformanceGrade": "C",
     "driverAge": 38,
     "numberOfViolations": 2,
@@ -24,7 +24,7 @@
     "engineType": "Gas"
   },
   {
-    "registrationNumber": "GHI 789",
+    "registrationNumber": "BAD001",
     "driverPerformanceGrade": "E",
     "driverAge": 30,
     "numberOfViolations": 5,
