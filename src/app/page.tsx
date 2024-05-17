@@ -133,7 +133,11 @@ export default function Home() {
           <TdsButton
             text="See your price"
             fullbleed
-            disabled={!inputValue || inputValue.length !== 7}
+            disabled={
+              !inputValue ||
+              inputValue.length !== 7 ||
+              !["GRT 001", "AVG 123", "BAD 001"].includes(inputValue)
+            }
             onClick={() => router.push("/loading")}
           ></TdsButton>
         </div>
