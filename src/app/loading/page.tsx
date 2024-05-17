@@ -14,7 +14,7 @@ export default function Loading() {
   useEffect(() => {
     let interval: ReturnType<typeof setInterval> | undefined;
 
-    if (isActive && timer < 9) {
+    if (isActive && timer < 10) {
       interval = setInterval(() => {
         setTimer((timer) => timer + 1);
       }, 1000);
@@ -86,7 +86,7 @@ export default function Loading() {
                 <h5 className="tds-headline-05 loader-title">Calculating...</h5>
               )}
             </div>
-            <ProgressBar width={timer * 12.5} />
+            <ProgressBar width={timer * 10} />
           </div>
         </div>
       </div>
