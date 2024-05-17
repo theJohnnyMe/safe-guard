@@ -1,0 +1,150 @@
+.price-comparison {
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+
+  .price-comparison__price {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding-top: 98px;
+    padding-bottom: 24px;
+
+    .price-comparison__price-text {
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .price-comparison__price-headline {
+      margin: 0 0 24px 0;
+      font-size: 80px;
+    }
+  }
+
+  .price-comparison__your-info {
+    max-width: 600px;
+    padding: 32px 16px 48px 16px;
+
+    .price-comparison__your-info_headline {
+      padding-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+    .price-comparison_your-info__table {
+      width: 100%;
+      border-collapse: collapse;
+
+      & th,
+      & td {
+        border-top: 1px solid #dbdfe6;
+        padding: 8px 0;
+      }
+
+      & th {
+        text-align: left;
+      }
+
+      & td {
+        text-align: right;
+      }
+    }
+  }
+  .price-comparison__your-extra-info {
+    max-width: 600px;
+    color: black;
+    background-color: white;
+    padding: 48px 16px 48px 16px;
+    margin-top: 32px;
+
+    .price-comparison__your-extra-info_list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li:not(:first-child) {
+        padding: 24px 0 0 0;
+      }
+
+      & li {
+        & h6 {
+          margin: 0 0 8px 0;
+        }
+      }
+    }
+  }
+
+  .price-comparison__your-option {
+    max-width: 600px;
+    color: black;
+    background-color: white;
+    border-top: 1px solid #dbdfe6;
+    border-bottom: 1px solid #dbdfe6;
+
+    .price-comparison__your-option_detail {
+      padding: 8px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .price-comparison__your-option_detail_summary {
+        padding: 8px;
+      }
+    }
+
+    .price-comparison__your-option_table {
+      width: 100%;
+      border-collapse: collapse;
+
+      td:not(:first-child) {
+        background-color: #f9fafb;
+      }
+
+      & td,
+      & th {
+        padding-top: 8px;
+        padding-bottom: 16px;
+        color: rgba(13, 15, 19, 0.6);
+        font-weight: 400;
+      }
+
+      & td {
+        border-top: 1px solid #dbdfe6;
+      }
+    }
+  }
+
+  .price-comparison_sign-up {
+    max-width: 600px;
+    padding: 24px 16px;
+    color: black;
+    background-color: white;
+  }
+}
+
+.secondary-button {
+  display: flex;
+  height: 56px;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  background-color: transparent;
+  color: white;
+
+  width: 100%;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.14px;
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+}
