@@ -12,7 +12,7 @@ export default function Overview() {
           Your price
         </p>
         <h1 className="overview__price-headline tds-headline-01">
-          1100{" "}
+          1160{" "}
           <span className="overview__price-headline-kronor tds-headline-05">
             kr/mo
           </span>
