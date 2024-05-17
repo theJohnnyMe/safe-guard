@@ -53,8 +53,8 @@ section {
   }
 }
 
-.start-center {
-  padding-top: 64px;
+.start-top {
+  margin-top: 64px;
 }
 
 .start-center {
@@ -62,7 +62,8 @@ section {
 }
 
 .start-bottom {
-  margin-top: 192px;
+  margin-top: 164px;
+  padding-bottom: 64px;
 }
 
 .secondary-button {
